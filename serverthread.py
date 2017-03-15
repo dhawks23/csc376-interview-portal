@@ -714,6 +714,8 @@ class ServerThread(threading.Thread):
         cur.executescript(qry)
 
         #Creating a new user
+
+    #DG
         response = str(self.client_socket.recv(1024).decode()) # User chooses to login or create a new account
         if (response == '1'):
             checking_pass = True
@@ -751,6 +753,7 @@ class ServerThread(threading.Thread):
                     self.client_socket.send(("Account created successfully").encode())
                     exists = False
                     pass
+              #DG
                 except:
                     error = "Integrity Error"
                     self.client_socket.send((error).encode())

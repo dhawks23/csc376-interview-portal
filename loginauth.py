@@ -1,4 +1,4 @@
-
+#Dg
 import sys
 import hashlib
 import getpass
@@ -100,4 +100,4 @@ class LoginAuthentication:
     def get_hashed_password( plain_text_password):
         return bcrypt.hashpw(plain_text_password.encode('utf-8'), bcrypt.gensalt())
 
-
+#DG

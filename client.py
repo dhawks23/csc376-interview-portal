@@ -878,8 +878,6 @@ if __name__ == '__main__':
     import ssl
     import ClientLogin
     import getpass
-<<<<<<< HEAD
-=======
 
     # argc = len(sys.argv)
     #
@@ -889,7 +887,7 @@ if __name__ == '__main__':
     # else:
     #     _HOST = str(sys.argv[1])
     #     _PORT = int(sys.argv[2])
->>>>>>> Worked on Manage Users, Manage Interviews, and edited some db.py functions. Also error handled for log in.
+
 
     ssl_socket = ssl_connection(socket.socket(socket.AF_INET, socket.SOCK_STREAM))
 
@@ -898,7 +896,7 @@ if __name__ == '__main__':
     print(greeting_msg)
 
     # Ask user to login or create new account
-
+#Dg
     print('(1) to login')
     print('(2) to Register')
 
@@ -951,7 +949,7 @@ if __name__ == '__main__':
                     print(success)
                     print(message)
                     checking_user_exists=False
-    
+#DG
     confirmation = str(ssl_socket.recv(1024).decode())  # confirms credentials
     print('conf = ' + str(confirmation))  # print credentials
     try:
@@ -961,10 +959,7 @@ if __name__ == '__main__':
         terminate_session()
         sys.exit()
 
-<<<<<<< HEAD
 
-=======
->>>>>>> Worked on Manage Users, Manage Interviews, and edited some db.py functions. Also error handled for log in.
     if cred == 0:
         print('admin')
         adminMenu(ssl_socket)
