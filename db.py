@@ -69,6 +69,7 @@ def retrieve_user_by_name(conn, username):
     conn.commit()
     return user_id
 
+#Dg
 def retrieve_user_all(conn):
     '''Retrieve all the users ID's and Names'''
     list_users = []
@@ -91,7 +92,7 @@ def retrieve_user_auth(conn, user_id):
     curs.close()
     conn.commit()
     return user_perms
-
+#DG
 def create_interview(conn, interview_id, name, description, user):
     '''Create a new interview with the given name and description.'''
 

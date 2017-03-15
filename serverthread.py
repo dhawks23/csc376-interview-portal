@@ -627,6 +627,8 @@ class ServerThread(threading.Thread):
     # - 
     # =============================================================================
 
+
+#DG
     def manage_users(self):
         self.client_socket.send( ('Welcome to User Management').encode() )
         conn = sqlite3.connect('interview.db')
@@ -694,13 +696,14 @@ class ServerThread(threading.Thread):
         print('Exiting User Management')
         return
 
+#DG
     def checkpassword(self, password, hashedpw):
 
         if bcrypt.checkpw(password.encode('utf-8'), hashedpw.encode('utf-8')):
             return True
         else:
             return False
-
+#DG
     
     def run(self):
     #greet and request username and password
